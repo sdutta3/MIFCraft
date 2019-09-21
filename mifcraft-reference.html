@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>mifcraft.MIF</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+		<!-- ==================== NAVIGATION BAR ==================== -->
+		<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+			<tr valign="middle"><!-- Home link -->
+				<th>&nbsp;&nbsp;&nbsp;<a
+        href="mifcraft-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+				<!-- Tree link -->
+				<th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+				<!-- Index link -->
+				<th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+				<!-- Help link -->
+				<th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+				<!-- Project homepage -->
+				<th class="navbar" align="right" width="100%">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<th class="navbar" align="center"
+            >MIFCraft</th>
+						</tr>
+					</table>
+				</th>
+			</tr>
+		</table>
+		<table width="100%" cellpadding="0" cellspacing="0">
+			<tr valign="top">
+				<td width="100%"><span class="breadcrumbs"><a href="mifcraft-module.html">Module&nbsp;mifcraft</a> ::
+        Class&nbsp;MIF
+      </span></td>
+				<td>
+					<table cellpadding="0" cellspacing="0">
+						<!-- hide/show private -->
+						<tr>
+							<td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td>
+						</tr>
+						<tr>
+							<td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="mifcraft.MIF-class.html"
+            target="_top">no&nbsp;frames</a>]</span></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<!-- ==================== CLASS DESCRIPTION ==================== -->
+		<h1 class="epydoc">Class MIF</h1>
+		<p class="nomargin-top"><span class="codelink"><a href="mifcraft-pysrc.html#MIF">source&nbsp;code</a></span></p>
+		<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">MIF</strong>
+</pre>
+
+<hr />
+<p>An object that manages a writable MIF file and accepts commands to add
+  to that file. It also tracks used labels to catch typos and forgotten 
+  labels early.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== --><a name="section-InstanceMethods"></a><!-- ==================== PROPERTIES ==================== --><a name="section-Properties"></a><!-- ==================== METHOD DETAILS ==================== --><a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td colspan="2" class="table-header">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr valign="top">
+        <td align="left"><span class="table-header">Method Details</span></td>
+        <td align="right" valign="top"
+         ><span class="options">[<a href="#section-MethodDetails"
+         class="privatelink" onclick="toggle_private();"
+         >hide private</a>]</span></td>
+      </tr>
+    </table>
+  </td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+			<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+				<tr>
+					<td>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+							<tr valign="top">
+								<td>
+									<h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">**kwargs</span>)</span><br />
+										<em class="fname">(Constructor)</em></h3>
+								</td>
+								<td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.__init__">source&nbsp;code</a></span>&nbsp;
+    </td>
+							</tr>
+						</table>
+						<p>Create a MIF object to take contents commands. Create the associated 
+  file object, write the header, and ensure that all paths given are valid.
+  Create non-existent paths.</p>
+						<dl class="fields">
+							<dt>Mandatory: filename &lt;path&gt;, basename &lt;string&gt;</dt>
+						</dl>
+					</td>
+				</tr>
+			</table>
+		</div>
+<a name="BoxAtlas"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">BoxAtlas</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.BoxAtlas">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_BoxAtlas
+ Mandatory: xrange &lt;(min, max)&gt;, yrange &lt;(min, max)&gt;, zrange &lt;(min, max)&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="ImageAtlas"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ImageAtlas</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ImageAtlas">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ImageAtlas
+ Mandatory: xrange &lt;(min, max)&gt;, yrange &lt;(min, max)&gt;, zrange &lt;(min, max)&gt;
+            viewplane &lt;str&gt;, image &lt;filename&gt; 
+            colormap &lt;[(color, name), (color, name) ... ]&gt;
+  Optional: matcherror &lt;float=3&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="MultiAtlas"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MultiAtlas</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.MultiAtlas">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_MultiAtlas
+ Mandatory: atlases &lt;[name, name, name...]&gt;
+  Optional: xrange &lt;(min, max)&gt;, yrange &lt;(min, max)&gt;, zrange &lt;(min, max)&gt;*
+  * See user manual for explanation of optional arguments
+</pre>
+					</td></tr></table>
+</div>
+<a name="EllipsoidAtlas"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">EllipsoidAtlas</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.EllipsoidAtlas">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_EllipsoidAtlas 
+ Mandatory: xrange &lt;(min, max)&gt;, yrange &lt;(min, max)&gt;, zrange &lt;(min, max)&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="RectangularMesh"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RectangularMesh</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.RectangularMesh">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_RectangularMesh
+ Mandatory: cellsize &lt;(xstep, ystep, zstep)&gt;, atlas &lt;name&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="UniaxialAnisotropy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">UniaxialAnisotropy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.UniaxialAnisotropy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_UniaxialAnisotropy 
+ Mandatory: K1 &lt;scalarfield&gt;, axis &lt;vectorfield&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="CubicAnisotropy"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">CubicAnisotropy</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.CubicAnisotropy">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_CubicAnisotropy 
+ Mandatory: K1 &lt;scalarfield&gt;, axis1 &lt;vectorfield&gt;, axis2 &lt;vectorfield&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="Exchange6Ngbr"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Exchange6Ngbr</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.Exchange6Ngbr">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_Exchange6Ngbr
+ Mandatory: default_A &lt;float&gt; OR default_lex &lt;float&gt;, atlas &lt;atlas&gt;
+            A &lt;[(region, region, value), (region, region, value) ...]&gt; OR lex &lt;...&gt;
+  Optional: 'default' may be used instead of 'default_A' or 'default_lex' for simplicity
+</pre>
+					</td></tr></table>
+</div>
+<a name="UniformExchange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">UniformExchange</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.UniformExchange">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_UniformExchange
+ Mandatory: A &lt;float&gt; or lex &lt;float&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="ExchangePtwise"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ExchangePtwise</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ExchangePtwise">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ExchangePtwise
+ Mandatory: A &lt;scalarfield&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="RandomSiteExchange"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RandomSiteExchange</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.RandomSiteExchange">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_RandomSiteExchange
+ Mandatory: linkprob &lt;0 to 1&gt;, Amin &lt;float&gt;, Amax &lt;float&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="Demag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Demag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.Demag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_Demag 
+ Mandatory: None 
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="SimpleDemag"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">SimpleDemag</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.SimpleDemag">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_SimpleDemag 
+ Mandatory: None 
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="UZeeman"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">UZeeman</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.UZeeman">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_UZeeman
+ Mandatory: Hrange &lt;[(x, y, z, X, Y, Z, steps), (x, y, z, X, Y, Z, steps) ... ]&gt;
+  Optional: multiplier &lt;float&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="FixedZeeman"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FixedZeeman</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.FixedZeeman">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_FixedZeeman
+ Mandatory: field &lt;float&gt;
+  Optional: multiplier &lt;float&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="ScriptUZeeman"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ScriptUZeeman</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ScriptUZeeman">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ScriptUZeeman 
+ Mandatory: script &lt;script&gt;
+  Optional: multiplier &lt;float=1&gt;, stage_count &lt;int&gt;
+            script_args &lt;[&quot;stage&quot; and/or &quot;total_time&quot; and/or &quot;stage_time&quot;]&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="TransformZeeman"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">TransformZeeman</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.TransformZeeman">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_TransformZeeman 
+ Mandatory: script &lt;script&gt;, field &lt;vectorfield&gt;, type &lt;transformtype&gt;
+  Optional: multiplier &lt;float=1&gt;, stage_count &lt;int&gt;
+            script_args &lt;[&quot;stage&quot; and/or &quot;total_time&quot; and/or &quot;stage_time&quot;]&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="StageZeeman"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">StageZeeman</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.StageZeeman">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_StageZeeman 
+ Mandatory: script &lt;script&gt; OR files &lt;[filename, filename ...]&gt;
+  Optional: multiplier &lt;float=1&gt;, stage_count &lt;int&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="EulerEvolve"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">EulerEvolve</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.EulerEvolve">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_EulerEvolve
+ Mandatory: None
+  Optional: gamma_LL &lt;float=2.211E5&gt; OR gamma_G &lt;float&gt;, alpha &lt;float=0.5&gt;, do_precess &lt;bool=1&gt;
+            min_timestep &lt;float&gt; AND max_timestep &lt;float&gt;
+            fixed_spins &lt;(atlas, [region, region ... ])&gt;
+            start_dm &lt;float=0.01&gt;
+            error_rate &lt;float=1&gt;, absolute_step_error &lt;float=0.2&gt;, relative_step_error &lt;float=0.2&gt;
+            step_headroom &lt;0 to 1 exclusive=0.85&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="RungeKuttaEvolve"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RungeKuttaEvolve</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.RungeKuttaEvolve">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_RungeKuttaEvolve
+ Mandatory: None
+  Optional: gamma_LL &lt;float=2.211E5&gt; OR gamma_G &lt;float&gt;, alpha &lt;float=0.5&gt;, do_precess &lt;bool=1&gt;
+            min_timestep &lt;float&gt; AND max_timestep &lt;float&gt;
+            fixed_spins &lt;(atlas, [region, region ... ])&gt;
+            start_dm &lt;float=0.01&gt;, method &lt;str=&quot;rkf54&quot;&gt;
+            error_rate &lt;float=1&gt;, absolute_step_error &lt;float=0.2&gt;, relative_step_error &lt;float=0.01&gt;
+            min_step_headroom &lt;0 to 1 exclusive=0.33&gt;, min_step_headroom &lt;0 to 1 exclusive=0.95&gt;
+            reject_goal &lt;float=0.05&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="SpinXferEvolve"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">SpinXferEvolve</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.SpinXferEvolve">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_SpinXferEvolve
+ Mandatory: J &lt;float&gt;, mp &lt;(x, y, z)&gt;
+  Optional: P &lt;float=0.4&gt;, Lambda &lt;float=2&gt; OR
+            P_fixed &lt;float&gt;, P_free &lt;float&gt;, Lambda_fixed &lt;float&gt;, Lambda_free &lt;float&gt;
+            J_profile &lt;script&gt;, J_profile_args &lt;[&quot;stage&quot; and/or &quot;total_time&quot; and/or &quot;stage_time&quot;]&gt;
+            
+            eps_prime &lt;undocumented&gt;, energy_slack &lt;undocumented&gt;
+            
+            gamma_LL &lt;float=2.211E5&gt; OR gamma_G &lt;float&gt;, alpha &lt;float=0.5&gt;, do_precess &lt;bool=1&gt;
+            min_timestep &lt;float&gt; AND max_timestep &lt;float&gt;
+            fixed_spins &lt;(atlas, [region, region ... ])&gt;
+            start_dm &lt;float=0.01&gt;, method &lt;str=&quot;rkf54&quot;&gt;
+            error_rate &lt;float=-1&gt;, absolute_step_error &lt;float=0.2&gt;, relative_step_error &lt;float=0.01&gt;
+            min_step_headroom &lt;0 to 1 exclusive=0.33&gt;, min_step_headroom &lt;0 to 1 exclusive=0.95&gt;
+            reject_goal &lt;float=0.05&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="CGEvolve"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">CGEvolve</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.CGEvolve">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_CGEvolve
+ Mandatory: None
+  Optional: gradient_reset_angle &lt;float=80&gt;, gradient_reset_count &lt;int=50&gt;
+            minimum_bracket_step &lt;float=0.05&gt;, maximum_bracket_step &lt;float=10&gt;
+            line_minimum_angle_precision &lt;float=UNDOCUMENTED&gt;, line_minimum_relwidth &lt;float=UNDOCUMENTED&gt;
+            energy_precision &lt;float=1e-12&gt;, method &lt;str in [&quot;Fletcher-Reeves&quot;, &quot;Polak-Ribiere&quot;]=&quot;Fletcher-Reeves&quot;&gt;
+            fixed_spins &lt;(atlas, [region, region ... ])&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="SpinTEvolve"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">SpinTEvolve</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.SpinTEvolve">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Anv_SpinTEvolve
+ Mandatory: beta &lt;float&gt;, u &lt;float or scalar field&gt;
+  Optional: u_profile &lt;script&gt;, u_profile_args &lt;script&gt;
+            gamma_LL &lt;float=2.211E5&gt; OR gamma_G &lt;float&gt;, alpha &lt;float=0.5&gt;, do_precess &lt;bool=1&gt;
+            min_timestep &lt;float&gt; AND max_timestep &lt;float&gt;
+            fixed_spins &lt;(atlas, [region, region ... ])&gt;
+            start_dm &lt;float=0.01&gt;, method &lt;str=&quot;rkf54&quot;&gt;
+            error_rate &lt;float=1&gt;, absolute_step_error &lt;float=0.2&gt;, relative_step_error &lt;float=0.01&gt;
+            min_step_headroom &lt;0 to 1 exclusive=0.33&gt;, min_step_headroom &lt;0 to 1 exclusive=0.95&gt;
+            reject_goal &lt;float=0.05&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="TimeDriver"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">TimeDriver</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.TimeDriver">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_TimeDriver 
+ Mandatory: Ms &lt;scalar field&gt;, m0 &lt;vector field&gt;
+  Optional: evolver &lt;evolver=first defined&gt;, mesh &lt;mesh=first defined&gt;
+            stage_count &lt;float=0&gt;, stage_count_check &lt;0 or 1=0&gt;
+            stopping_dm_dt &lt;float or 0=0&gt;, stopping_time &lt;float or 0=0&gt;, stage_iteration_limit &lt;int or 0=0&gt;
+            checkpoint_file &lt;path=OOMMF default&gt;, checkpoint_interval &lt;minutes, -1, or 0=15&gt;
+            checkpoint_cleanup &lt;&quot;normal&quot;, &quot;done_only&quot;, or &quot;never&quot;=&quot;normal&quot;&gt;
+            normalize_aveM_output &lt;0 or 1=1&gt;, scalar_output_format &lt;printf string='%.17g'&gt;
+            vector_field_output_format &lt;'text', 'binary 4', or 'binary 8'='binary 8'&gt;
+            report_max_spin_angle &lt;0 or 1=1&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="MinDriver"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MinDriver</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.MinDriver">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_MinDriver 
+ Mandatory: Ms &lt;scalar field&gt;, m0 &lt;vector field&gt;
+  Optional: evolver &lt;evolver=first defined&gt;, mesh &lt;mesh=first defined&gt;
+            stage_count &lt;float=0&gt;, stage_count_check &lt;0 or 1=0&gt;
+            stopping_mxHxm &lt;float=0&gt;, stage_iteration_limit &lt;int or 0=0&gt;
+            checkpoint_file &lt;path=OOMMF default&gt;, checkpoint_interval &lt;minutes, -1, or 0=15&gt;
+            checkpoint_cleanup &lt;&quot;normal&quot;, &quot;done_only&quot;, or &quot;never&quot;=&quot;normal&quot;&gt;
+            normalize_aveM_output &lt;0 or 1=1&gt;, scalar_output_format &lt;printf string='%.17g'&gt;
+            vector_field_output_format &lt;'text', 'binary 4', or 'binary 8'='binary 8'&gt;
+            report_max_spin_angle &lt;0 or 1=1&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="UniformScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">UniformScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.UniformScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_UniformScalarField
+ Mandatory: value &lt;float&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<a name="AtlasScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AtlasScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.AtlasScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_AtlasScalarField
+ Mandatory: atlas &lt;atlas&gt;, values &lt;[(region, value), (region, value) ... ]&gt;
+  Optional: default_value &lt;float&gt;, multiplier &lt;float&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="LinearScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">LinearScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.LinearScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_LinearScalarField 
+ Mandatory: vector &lt;(x, y, z)&gt;
+  Optional: norm &lt;float&gt;, offset &lt;float=0&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="RandomScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RandomScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.RandomScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_RandomScalarField 
+ Mandatory: range_min &lt;float&gt;, range_max &lt;float&gt;
+  Optional: cache_grid &lt;mesh&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="ScriptScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ScriptScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ScriptScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ScriptScalarField
+ Mandatory: script &lt;script&gt;
+  Optional: script_args &lt;[&quot;relpt&quot; and/or &quot;rawpt&quot; a/o &quot;minpt&quot; a/o &quot;maxpt&quot; a/o &quot;span&quot;
+                          a/o &quot;scalar_fields&quot; a/o &quot;vector_fields&quot;], [&quot;relpt&quot;]&gt;
+            atlas &lt;atlas&gt; OR xrange &lt;(float, float)&gt;, yrange &lt;(float, float)&gt;, zrange &lt;(float, float)&gt;
+            scalar_fields &lt;[field, field, ... ]&gt;, vector_fields &lt;[field, field, ... ]&gt;
+            multiplier &lt;float=1&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="VecMagScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">VecMagScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.VecMagScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_VecMagScalarField 
+ Mandatory: field &lt;vector field&gt;
+  Optional: multiplier &lt;float=1&gt;, offset &lt;float=0&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="ScriptOrientScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ScriptOrientScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ScriptOrientScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ScriptOrientScalarField 
+ Mandatory: field &lt;scalar field&gt;, script &lt;script&gt;
+            atlas &lt;atlas&gt; OR xrange &lt;(float, float)&gt;, yrange &lt;(float, float)&gt;, zrange &lt;(float, float)&gt;
+  Optional: script_args &lt;[&quot;relpt&quot; and/or &quot;rawpt&quot; a/o &quot;minpt&quot; a/o &quot;maxpt&quot; a/o &quot;span&quot;], [&quot;relpt&quot;]&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="AffineOrientScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AffineOrientScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.AffineOrientScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_AffineOrientScalarField
+ Mandatory: field &lt;scalar field&gt;, M &lt;[] of 1, 3, 6, or 9 floats&gt;
+  Optional: offset &lt;(x,y,z)=(0, 0, 0)&gt;, inverse &lt;0 or 1=0&gt;, inverse_slack &lt;int=128&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="ImageScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ImageScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ImageScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ImageScalarField 
+ Mandatory: image &lt;filename&gt;, viewplane &lt;'xy' or 'zx' or 'yz'&gt;
+            atlas &lt;atlas&gt; OR xrange &lt;(float, float)&gt;, yrange &lt;(float, float)&gt;, zrange &lt;(float, float)&gt;
+  Optional: multiplier &lt;float=1&gt;, offset &lt;float=0&gt;, invert &lt;0 or 1=0&gt;
+            exterior &lt;float, 'boundary', or 'error'='error'&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="UniformVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">UniformVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.UniformVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_UniformVectorField 
+ Mandatory: vector &lt;(x, y, z)&gt;
+  Optional: norm &lt;float&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="AtlasVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AtlasVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.AtlasVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_AtlasVectorField 
+ Mandatory: atlas &lt;atlas&gt;, values &lt;[(atlas, (x, y, z)), (atlas (x, y, z)), ... ]&gt;
+  Optional: norm &lt;float&gt;, multiplier &lt;float=1&gt;, default_value &lt;(x, y, z)&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="ScriptVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ScriptVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ScriptVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ScriptVectorField
+ Mandatory: script &lt;script&gt;
+  Optional: script_args &lt;[&quot;relpt&quot; and/or &quot;rawpt&quot; a/o &quot;minpt&quot; a/o &quot;maxpt&quot; a/o &quot;span&quot;
+                          a/o &quot;scalar_fields&quot; a/o &quot;vector_fields&quot;], [&quot;relpt&quot;]&gt;
+            atlas &lt;atlas&gt; OR xrange &lt;(float, float)&gt;, yrange &lt;(float, float)&gt;, zrange &lt;(float, float)&gt;
+            scalar_fields &lt;[field, field, ... ]&gt;, vector_fields &lt;[field, field, ... ]&gt;
+            norm &lt;float&gt;, multiplier &lt;float=1&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="FileVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">FileVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.FileVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_FileVectorField 
+ Mandatory: file &lt;filename&gt; 
+  Optional: { atlas &lt;atlas&gt; OR xrange &lt;(float, float)&gt;, yrange &lt;(float, float)&gt;, zrange &lt;(float, float)&gt; }
+            OR
+            { spatial_scaling &lt;(x, y, z)&gt;, spatial_offset &lt;(x, y, z)&gt; }
+            norm &lt;float&gt;, multiplier &lt;float=1&gt;, exterior &lt;float, 'boundary', or 'error'='error&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="RandomVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">RandomVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.RandomVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_RandomVectorField
+ Mandatory: min_norm &lt;float&gt;, max_norm &lt;float&gt;
+  Optional: cache_grid &lt;mesh&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="PlaneRandomVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">PlaneRandomVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.PlaneRandomVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_PlaneRandomVectorField
+ Mandatory: min_norm &lt;float&gt;, max_norm &lt;float&gt;, plane_normal &lt;(x, y, z)&gt;
+  Optional: cache_grid &lt;mesh&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="ScriptOrientVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ScriptOrientVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ScriptOrientVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ScriptOrientVectorField 
+ Mandatory: field &lt;vector field&gt;, script &lt;script&gt;
+            atlas &lt;atlas&gt; OR xrange &lt;(float, float)&gt;, yrange &lt;(float, float)&gt;, zrange &lt;(float, float)&gt;
+  Optional: script_args &lt;[&quot;relpt&quot; and/or &quot;rawpt&quot; a/o &quot;minpt&quot; a/o &quot;maxpt&quot; a/o &quot;span&quot;], [&quot;relpt&quot;]&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="AffineOrientVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AffineOrientVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.AffineOrientVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_AffineOrientVectorField
+ Mandatory: field &lt;vector field&gt;, M &lt;[] of 1, 3, 6, or 9 floats&gt;
+  Optional: offset &lt;(x,y,z)=(0, 0, 0)&gt;, inverse &lt;0 or 1=0&gt;, inverse_slack &lt;int=128&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="AffineTransformScalarField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">AffineTransformScalarField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.AffineTransformScalarField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_AffineTransformScalarField 
+ Mandatory: field &lt;scalar field&gt;
+  Optional: multiplier &lt;float=1&gt;, offset &lt;float=0&gt;, inverse &lt;0 or 1=0&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="MaskVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">MaskVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.MaskVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Implements: Oxs_MaskVectorField 
+ Mandatory: mask &lt;scalar field&gt;, field &lt;vector field&gt;
+  Optional: None
+</pre>
+  <dl class="fields">
+							<dd><ul class="nomargin-top">
+        
+    </ul></dd>
+						</dl>
+</td></tr></table>
+</div>
+<a name="ImageVectorField"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">ImageVectorField</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.ImageVectorField">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Oxs_ImageVectorField
+ Mandatory: image &lt;filename&gt;, viewplane &lt;'xy' or 'zx' or 'yz'&gt;
+            atlas &lt;atlas&gt; OR xrange &lt;(float, float)&gt;, yrange &lt;(float, float)&gt;, zrange &lt;(float, float)&gt;
+  Optional: multiplier &lt;float=1&gt;, offset &lt;float=0&gt;, invert &lt;0 or 1=0&gt;
+            exterior &lt;float, 'boundary', or 'error'='error'&gt;
+</pre>
+					</td></tr></table>
+</div>
+<a name="Destination"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Destination</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.Destination">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Destination 
+ Mandatory: label &lt;string&gt;, type &lt;'mmDisp' or 'mmGraph' or 'mmArchive' or 'mmDataTable'
+  Optional: new &lt;True or False=False&gt;
+   WARNING: It is not currently possible to validate the data types being linked in this way.
+</pre>
+					</td></tr></table>
+</div>
+<a name="Schedule"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">Schedule</span>(<span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    ><span class="codelink"><a href="mifcraft-pysrc.html#MIF.Schedule">source&nbsp;code</a></span>&nbsp;
+    </td>
+  </tr></table>
+						<pre class="literalblock">
+
+Implements: Schedule 
+ Mandatory: output &lt;an OOMMF output&gt;, label &lt;destination&gt;
+            stage &lt;int&gt; AND/OR step &lt;int&gt;
+  Optional: None
+</pre>
+					</td></tr></table>
+</div>
+<br />
+		<!-- ==================== NAVIGATION BAR ==================== -->
+		<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+				<td align="right" class="footer"></td>
+			</tr>
+</table>
+	</body>
+</html>
